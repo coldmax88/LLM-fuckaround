@@ -8,7 +8,7 @@ import torch
 import subprocess
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-
+torch.cuda.empty_cache()
 model3_2="mistralai/Mixtral-8x7B-Instruct-v0.1"
 model3_1="mistralai/Mistral-7B-Instruct-v0.2"
 
