@@ -1,16 +1,18 @@
 import socket
-
+serverip=""
+Port=12345
 def start_client():
-    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect(('203.0.40.50', 12345))
-
-    question = "Das ist eine Frage vom Client"
-    client_socket.send(question.encode())
-
-    data = client_socket.recv(1024).decode()
-    print(f"Vom Server empfangene Antwort: {data}")
-
-    client_socket.close()
+    while True:
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client_socket.connect((serverip, Port))
+    
+        question = str(input("Nutzer:    "))
+        client_socket.send(question.encode())
+    
+        data = client_socket.recv(1024).decode()
+        print(f"KI:    {data}")
+    
+        client_socket.close()
 
 if __name__ == "__main__":
     start_client()
