@@ -43,7 +43,7 @@ except:
 
 def start_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(('203.0.40.50', 12345))
+    server_socket.bind(('34.116.232.56', 12345))
     server_socket.listen(1)
     print("Server gestartet und hört auf Port 12345")
     i=0
