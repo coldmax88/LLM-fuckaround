@@ -1,5 +1,5 @@
 import socket
-serverip=""
+serverip="34.116.232.56"
 Port=12345
 def start_client():
     while True:
